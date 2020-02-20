@@ -4,7 +4,7 @@ CREATE DATABASE  IF NOT EXISTS `final`;
 USE `final`;
 
 --
--- PART 2
+-- 
 --
 
 ALTER TABLE final.member MODIFY member_id VARCHAR(255);
@@ -69,11 +69,7 @@ ON DELETE RESTRICT
 ON UPDATE RESTRICT;
 
 --
--- Part 4
---
-
---
--- 4.1
+-- 
 --
 
 SELECT d.drug_name, COUNT(a.fill_date) AS no_of_prescriptions
@@ -83,7 +79,7 @@ GROUP BY d.drug_name
 ORDER BY d.drug_name;
 
 --
--- 4.2
+--
 --
 
 DROP TABLE IF EXISTS `f42`;
@@ -103,7 +99,7 @@ group by age
 order by age;
 
 --
--- 4.3
+--
 --
 
 DROP TABLE IF EXISTS `f43`;
